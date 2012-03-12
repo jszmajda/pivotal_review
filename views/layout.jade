@@ -1,6 +1,13 @@
 !!!
 html
   head
-    title= title
+    title Pivotal Review
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+  body
+    if flash.info
+      INFOS
+      .flash.info= flash.info.join("<br>")
+    if flash.error
+      ERRORS
+      .flash.error= flash.error.join("<br>")
+    div!= body
