@@ -7,7 +7,6 @@ exports.index = (req, res) ->
       req.flash('error', 'Error talking to Pivotal, please reload')
     else
       projects = data.project
-      console.log projects
 
     res.render('projects/index', { projects: projects })
 
