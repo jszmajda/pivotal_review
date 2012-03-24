@@ -6,3 +6,31 @@ body {
 a {
   color: #00B7FF;
 }
+
+.ratings a {
+  cursor: pointer;
+  border-left: 1px solid #6B6;
+  padding-left: 2px;
+  margin-left: 2px;
+  background-color: #AFA;
+  width: 10px;
+  height: 22px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.ratings a img,
+.rating > a img{
+  padding-top: 2px;
+}
+
+.rating > a {
+  border-left: 1px solid #DB8;
+  padding-left: 2px;
+  margin-left: 2px;
+  background-color: #FDA;
+  width: 10px;
+  height: 22px;
+  display: inline-block;
+  border-radius: 5px;
+}

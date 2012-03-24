@@ -1,3 +1,20 @@
-each story in stories
-  li
-    = story.name
+!= js('rate')
+
+h1 Please rate these stories
+table(data-project-id = project_id)
+  thead
+    tr
+      th.story_type
+      //-th.estimate
+      th.title Story
+      th.rating Rating
+  tbody
+    each story in stories
+      tr(data-story-id = story.id)
+        td.story_type
+          img(src=story_type_icon(story.story_type))
+        //-td.estimate
+        //-  img(src=story_size_icon(story.estimate))
+        td.title
+          #{story.name} [#{story.labels}]
+        td.rating!= partial('rating')
